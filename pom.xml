@@ -137,18 +137,18 @@
 				<runtime.env>packageConfig\product</runtime.env>
 				<final.name>x</final.name>
 			</properties>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
 		</profile>
 		<profile>
 			<id>alphaZ</id>
 			<properties>
 				<runtime.env>packageConfig\alphaZ</runtime.env>
-				<final.name>ROOT</final.name>
+				<final.name>demo_wechat_jsapi</final.name>
 				<ftp.server.id>alphaFmSz01</ftp.server.id>
 				<ftp.to.url>ftp://alphaZ.test:29281/apache-tomcat-8.0.15/swapdir/</ftp.to.url>
 			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
 		</profile>
 	</profiles>
 </project>
