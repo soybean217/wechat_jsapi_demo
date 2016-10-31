@@ -36,11 +36,13 @@ public class WechatJsSign {
 	public Map<String, String> sign() throws Exception {
 		jsapiTicket = WechatBaseService.getInstance().getJsapiTicket(appId);
 		ret = new HashMap<String, String>();
-		// String nonce_str = create_nonce_str();
-		// String timestamp = create_timestamp();
-		String nonce_str = "fffcee7b-4e31-4560-a511-181eab3c236b";
-		String timestamp = "1477653916";
-		jsapiTicket = "jsapi_ticket";
+		String nonce_str = create_nonce_str();
+		String timestamp = create_timestamp();
+		// for debug
+
+		// String nonce_str = "fffcee7b-4e31-4560-a511-181eab3c236b";
+		// String timestamp = "1477653916";
+		// jsapiTicket = "jsapi_ticket";
 
 		String string1;
 		String signature = "";

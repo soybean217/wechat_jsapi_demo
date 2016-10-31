@@ -2,8 +2,9 @@
 	pageEncoding="UTF-8"%>
 <%@page import="org.demo.WechatJsSign"%>
 <%
-	String currentUrl = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
-			+ request.getContextPath() + request.getRequestURI()
+	String currentUrl = request.getScheme() + "://" + request.getServerName() 
+			//+ request.getContextPath() + request.getRequestURI()
+			+ request.getRequestURI()
 			+ (request.getQueryString() != null && request.getQueryString().length() > 0
 					? "?" + request.getQueryString()
 					: "");
@@ -161,18 +162,10 @@
 	 */
 	wx.config({
 		debug : true,
-		appId :
-'<%=wechatJsSign.getAppId()%>'
-	,
-		timestamp :
-<%=wechatJsSign.getRet().get("timestamp")%>
-	,
-		nonceStr :
-'<%=wechatJsSign.getRet().get("nonceStr")%>'
-	,
-		signature :
-'<%=wechatJsSign.getRet().get("signature")%>'
-	,
+		appId : '<%=wechatJsSign.getAppId()%>'	,
+		timestamp : <%=wechatJsSign.getRet().get("timestamp")%>	,
+		nonceStr : '<%=wechatJsSign.getRet().get("nonceStr")%>',
+		signature :'<%=wechatJsSign.getRet().get("signature")%>',
 		jsApiList : [ 'checkJsApi', 'onMenuShareTimeline',
 				'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo',
 				'onMenuShareQZone', 'hideMenuItems', 'showMenuItems',
