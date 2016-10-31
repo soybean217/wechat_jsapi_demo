@@ -25,7 +25,7 @@ public class WechatJsSign {
 
 	public static void main(String[] args) throws Exception {
 		WechatJsSign wechatJsSign = new WechatJsSign();
-		wechatJsSign.setUrl("http://xxx");
+		wechatJsSign.setUrl("http://example.com");
 		wechatJsSign.setAppId("wxb011e7747898ad8c");
 		wechatJsSign.sign();
 		for (Map.Entry entry : wechatJsSign.getRet().entrySet()) {
@@ -36,8 +36,12 @@ public class WechatJsSign {
 	public Map<String, String> sign() throws Exception {
 		jsapiTicket = WechatBaseService.getInstance().getJsapiTicket(appId);
 		ret = new HashMap<String, String>();
-		String nonce_str = create_nonce_str();
-		String timestamp = create_timestamp();
+		// String nonce_str = create_nonce_str();
+		// String timestamp = create_timestamp();
+		String nonce_str = "fffcee7b-4e31-4560-a511-181eab3c236b";
+		String timestamp = "1477653916";
+		jsapiTicket = "jsapi_ticket";
+
 		String string1;
 		String signature = "";
 
