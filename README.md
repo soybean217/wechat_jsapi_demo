@@ -6,9 +6,6 @@ https://github.com/xiangtone/xtone-public-base/
 
 xtone-java-common
 
-demo url:
-http://www.dushujielong.com/demo-wechat-js.jsp
-
 
 包含签名的java代码和token的相关缓存。
 
